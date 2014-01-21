@@ -1,10 +1,10 @@
-public class Object {
+public class ObjForm {
 	public Triangle[] polys;
 	public Vector pos;
 	public double rot;
 	public int len;
 	
-	public Object(Triangle[] polygon, Vector position, double rotation) {
+	public ObjForm(Triangle[] polygon, Vector position, double rotation) {
 		polys = polygon;
 		pos = position;
 		rot = rotation;

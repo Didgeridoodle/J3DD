@@ -1,16 +1,16 @@
 public class Scene {
-	public Object terrain;
-	public Object[] objlist;
+	public ObjForm terrain;
+	public ObjForm[] objlist;
 	public boolean[] inuse;
 	public int objindex = 10;
 	
-	public Scene(Object terrset) {
+	public Scene(ObjForm terrset) {
 		terrain = terrset;
 		inuse = new boolean[objindex];
-		objlist = new Object[objindex];
+		objlist = new ObjForm[objindex];
 	}
 	
-	public int addobj(Object addto, Vector position) {
+	public int addobj(ObjForm addto, Vector position) {
 		//Changes object's position than adds it to the object list and returns it's index
 		addto.pos = position;
 		objlist[findfree()] = addto;

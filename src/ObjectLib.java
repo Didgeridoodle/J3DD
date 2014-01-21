@@ -4,7 +4,7 @@ public class ObjectLib {
 		
 	}
 	
-	public Object FlatSurf() {
+	public ObjForm FlatSurf() {
 		Vector base = new Vector(0.0, 0.0, 0.0);
 		Triangle[] result = {new Triangle(base, base, base), new Triangle(base, base, base)};
 		//Surface Half 1
@@ -16,11 +16,11 @@ public class ObjectLib {
 		result[1].p2 = new Vector(1.0, 0.0, 0.0);
 		result[1].p3 = new Vector(0.0, 0.0, 1.0);
 		
-		Object newobj = new Object(result, new Vector(0.0, 0.0, 0.0), 0.0);
+		ObjForm newobj = new ObjForm(result, new Vector(0.0, 0.0, 0.0), 0.0);
 		return newobj;
 	}
 	
-	public Object Box() {
+	public ObjForm Box() {
 		Vector base = new Vector(0.0, 0.0, 0.0);
 		Triangle[] result = createTriarray();
 		for(int i = 0; i < 11; i++) {
@@ -81,7 +81,7 @@ public class ObjectLib {
 		result[11].p3 = new Vector(1.0, 0.0, 0.0);	
 		}
 		
-		Object newobj = new Object(result, base, 0.0);
+		ObjForm newobj = new ObjForm(result, base, 0.0);
 		return newobj;
 	}
 	
@@ -102,7 +102,7 @@ public class ObjectLib {
 		return result;
 	}
 	
-	public void objprint(Object objtop) {
+	public void objprint(ObjForm objtop) {
 		int lenobj = objtop.polys.length;
 		//Prints the number of triangles
 		System.out.println(lenobj);
